@@ -1,0 +1,20 @@
+body{
+    background-image: url(/img/5024x3768-bg.jpg);
+    background-repeat: no-repeat;
+
+    @media (max-width: $breakpoint-sm) {
+        background-image: url(/img/1280x960-bg.jpg);
+    }
+
+    @media (max-width: $breakpoint-md) {
+        background-image: url(/img/1280x960-bg.jpg);
+    }
+
+    @media (max-width: $breakpoint-lg) {
+        background-image: url(/img/1920x1440-bg.jpg);
+    }
+
+    @media (max-width: $breakpoint-xl) {
+        background-image: url(/img/1920x1440-bg.jpg);
+    }
+}

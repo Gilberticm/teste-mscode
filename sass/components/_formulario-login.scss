@@ -1,0 +1,99 @@
+.formulario-login{
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 55px 30px 40px 30px;
+    box-shadow: 0 3px 5px #747474;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    &__titulo {
+        color: rgb(90, 90, 90);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__grupo {
+        margin-bottom: 15px;
+    }
+
+    &__campo {
+        width: 100%;
+        border: 1px solid #c4c4c4;
+        border-radius: 5px;
+        padding: 10px 5px;
+        padding-left: 10px;
+    }
+    
+    &__label {
+        color: rgb(90, 90, 90);
+        padding-left: 10px;
+    }
+    
+    &__botao {
+        border: 3px solid $cor-principal;
+        border-radius: 300px;
+        background-color: #fff;
+        color: $cor-principal;
+        padding: 5px 28px;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+        font-weight: bold;
+    }
+
+    &__botao:hover{
+        background-color: rgb(252, 180, 180);
+        transition: $t-transicao ease-out;
+        color: rgb(184, 43, 43);
+        border-color: rgb(184, 43, 43);
+    }
+
+    &__signup{
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    &__forgot, &__signup__link{
+        text-decoration: none;
+        font-weight: bold;
+        color: #343434;
+        margin-bottom: 10px;
+        display: block;
+        font-size: 16px;
+        height: 20px;
+        transition: all 400ms ease-out;
+
+        &:hover{
+            color: #0000FF;
+        }
+    }
+
+    @media (min-width: $breakpoint-sm) {
+        padding: 100px;
+    }
+
+    @media (min-width: $breakpoint-md) {
+        padding: 100px;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        padding: 100px;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+        padding: 100px;
+    }
+}
+
+input#name:hover,
+input#password:hover
+{
+    color: #000;
+    transition: $t-transicao ease-out;
+    background-color: $background-cform;
+    border-color: $bordercolor-cform;
+    &::placeholder{
+        color: #000;
+        transition: $t-transicao ease-out;
+    }
+}

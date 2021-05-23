@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSCode Pesquisa de Satisfação</title>
+    <link rel="icon" href="img/favicon.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Ínicio cabeçalho do site -->
+    <header class="cabecalho cabecalho-login">
+
+        <!-- Ínicio da div que controla tamanho do site -->
+        <div class="meu-container">
+
+            <!-- Logo -->
+            <a class="logo" href="/index.html">Moveis Simonetti</a>
+
+            <!-- Ínicio menu navegação -->
+            <nav class="menu-principal menu-principal--fechado" id="nav">
+
+                <!-- Botão menu -->
+                <button class="menu-principal__btn">Menu</button>
+
+                <!-- Lista menu -->
+                <ul class="menu-principal__lista">
+
+                    <!-- Itens menu -->
+                    <li><a class="menu-principal__item" href="https://www.moveissimonetti.com.br"
+                            target="_blank">Site</a></li>
+                    <li><a class="menu-principal__item" href="#">Produtos</a></li>
+                    <li><a class="menu-principal__item menu-principal__item--atual" href="index.html">Pesquisa</a></li>
+                    <li><a class="menu-principal__item" href="login.html">Login</a></li>
+                </ul><!-- Fim lista menu -->
+            </nav><!-- Fim menu navegação -->
+        </div><!-- Fim da div que controla tamanho do site -->
+    </header><!-- Fim cabeçalho site -->
+
+    <!-- Ínici conteúdo da página-->
+    <main>
+
+
+        <!-- Ínicio da div que controla tamanho do site -->
+        <div class="meu-container">
+
+            <!-- Ínicio do formulário pequisa -->
+            <form name="pesquisa" class="formulario" method="POST" id="pesquisa">
+
+                <div class="formulario__grupo">
+                    <label class="formulario__label" for="nome">Nome</label><br>
+                    <input class="formulario__campo" type="text" name="nome" id="nome"
+                        placeholder="Digite seu nome completo">
+                </div>
+
+                <div class="formulario__grupo">
+                    <label class="formulario__label" for="cpf">CPF</label><br>
+                    <input class="formulario__campo" type="text" name="cpf" id="cpf" placeholder="000.000.000-00"
+                        required autocomplete="off" onblur="FG_FormatarCPF()">
+                </div>
+
+                <div class="formulario__grupo">
+                    <label class="formulario__label" for="telefone">Telefone</label><br>
+                    <input class="formulario__campo" type="text" name="telefone" id="telefone"
+                        placeholder="(00) 0 0000-0000" maxlength="16">
+                </div>
+
+                <div class="formulario__grupo">
+                    <label class="formulario__label" for="email">E-mail</label><br>
+                    <input class="formulario__campo" type="email" name="email" id="email"
+                        placeholder="email@exemplo.com">
+                </div>
+
+                <div class="formulario__grupo">
+                    <label class="formulario__label" for="estado">Estado</label><br>
+                    <select name="estado" id="estado" class="formulario__campo" required>
+                        <option selected disabled>-- Estado --</option>
+                        <option>Espirito Santo</option>
+                        <option>Bahia</option>
+                        <option>Minas Gerais</option>
+                        <option>Exemplo</option>
+                        <option>Exemplo</option>
+                        <option>Exemplo</option>
+                        <option>Exemplo</option>
+                    </select>
+                </div>
+
+                <div class="formulario__grupo">
+                    <label class="formulario__label" for="cidade">Cidade</label><br>
+                    <select name="estado" id="cidade" class="formulario__campo">
+                        <option selected disabled>-- Cidade --</option>
+                        <option value="pinheiros">Pinheiros</option>
+                        <option value="exemplo">Exemplo</option>
+                        <option value="exemplo">Exemplo</option>
+                        <option value="exemplo">Exemplo</option>
+                        <option value="exemplo">Exemplo</option>
+                        <option value="exemplo">Exemplo</option>
+                    </select>
+                </div>
+
+                <div class="formulario__grupo formulario__grupo__sexo">
+                    <label class="formulario__label">Sexo</label><br>
+                    <input class="form-check-input" type="radio" name="sexo" id="feminino" value="F"> <label
+                        class="formulario-check-label" for="feminino">Feminino</label>
+                    <input class="form-check-input" type="radio" name="sexo" id="masculino" value="M"> <label
+                        class="formulario-check-label" for="masculino">Masculino</label>
+                    <input class="form-check-input" type="radio" name="sexo" id="indefinido" value="I"> <label
+                        class="formulario-check-label" for="indefinido">Indefinido</label>
+                </div>
+
+
+                <div class="formulario__gurpo-nota">
+
+                    <label class="formulario__label__nota" for="input-range">
+                        De 0 a 10, qual a chance de você indicar a Móveis Simonetti para amigos e familiares?
+                    </label>
+
+                    <div class="nota">
+
+                        <span class="badge rounded-pill bg-primary formulario__nota">Nota</span>
+
+                        <div class="formulario__div-emoji">😄</div>
+                    </div>
+
+                    <div class="formulario__slider">
+                        <span class="badge rounded-pill bg-danger">Baixa</span>
+
+                        <input class="formulario__input-range" type="range" name="nota" id="input-range" value="10"
+                            min="0" max="10" step="1" required>
+                        <span class="badge rounded-pill bg-success">&nbsp;Alta&nbsp;</span>
+                    </div>
+                </div>
+
+                <div class="formulario__grupo__experiencia">
+
+                    <label class="formulario__label__nota" for="resposta">O que te motivou nesta nota? Deixe suas
+                        experiências, sugestões, dúvidas ou reclamações no campo abaixo!</label><br>
+                    <textarea class="formulario__campo" name="resposta" id="resposta" cols="30" rows="10"
+                        placeholder="Quaiquer sugestões ou reclamações serão bem vindas!"></textarea>
+                </div>
+
+
+                <input class="formulario__botao" type="submit" value="Enviar">
+            </form><!-- Fim formulário pesquisa-->
+        </div><!-- Fim da div que controla tamanho do site -->
+    </main><!-- Fim conteúdo da página-->
+
+    <!-- Ínicio rodapé -->
+    <footer class="rodape">
+
+        <!-- Ínicio linha 1 de conteúdos rodapé -->
+        <div class="rodape__linha-1">
+            <div class="meu-container">
+
+                <div class="container">
+
+                    <!-- Coluna rodapé logo -->
+                    <div class="rodape__coluna">
+                        <a class="logo logo--menor" href="/index.html">Moveis Simonetti</a><!-- Logo -->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quisquam dolorum officia
+                            blanditiis dolorem nemo.</p>
+                    </div>
+
+                    <!-- Coluna rodapé das redes sociais -->
+                    <div class="rodape__coluna">
+                        <h2 class="rodape__titulo">Social</h2>
+                        <ul class="rodape__lista-links">
+                            <li class="rodape__lista-links__item"><a href="#">Twitter</a></li>
+                            <li class="rodape__lista-links__item"><a href="#">Facebook</a></li>
+                            <li class="rodape__lista-links__item"><a href="#">Instagram</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna rodapé de navegação -->
+                    <div class="rodape__coluna">
+                        <h2 class="rodape__titulo">Links Navegação</h2>
+                        <ul class="rodape__lista-links">
+                            <li class="rodape__lista-links__item"><a href="https://www.moveissimonetti.com.br">Site</a>
+                            </li>
+                            <li class="rodape__lista-links__item"><a href="/produtos.html">Produtos</a></li>
+                            <li class="rodape__lista-links__item"><a href="/index.html">Pesquisa</a></li>
+                            <li class="rodape__lista-links__item"><a href="/login.html">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- fim linha 1 de conteúdos rodapé -->
+
+        <!-- Ínicio linha 2 de copyrigth rodapé -->
+        <div class="rodape__linha-2">
+            &copy; 2021 - Todos os direitos reservados - Gilbert de Oliveira Santos
+        </div><!-- fim linha 2 de copyrigth rodapé -->
+    </footer><!-- Fim rodapé -->
+</body>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/botao-menu.js"></script>
+</html>

@@ -1,0 +1,75 @@
+.menu-principal{
+    &__btn{
+        display: block;
+        width: 40px;
+        height: 40px;
+        text-indent: -9999px;
+        background-color: #fff;
+        background-image: url(../img/menuprincipal-btn-bg.png);
+        background-repeat: no-repeat;
+        background-position: -31px 7px;
+        background-size: 60px;
+        border-color: $cor-principal;
+        border-style: solid;
+        border-radius: 7px;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+
+        &:hover{
+            border-color: rgb(155, 0, 0);
+        }
+
+        @media(min-width: $breakpoint-md){
+            display: none;
+        }
+    }
+    
+    &__lista{
+        padding: 0;
+        list-style: none;
+        transition: margin 200ms ease-out;
+        @media(min-width: $breakpoint-md){
+            li{
+                display: inline-block;
+                margin: 0 10px;
+            }
+        }
+    }
+    
+    &__item{
+        text-decoration: none;
+        font-weight: bold;
+        color: #343434;
+        margin-bottom: 10px;
+        display: block;
+        font-size: 16px;
+        height: 20px;
+        transition: all 400ms ease-out;
+
+        &:hover{
+            color: #b30000;
+        }
+    }
+    
+    &__item--atual {
+        color: $cor-principal;
+    }
+
+    @media(max-width: $breakpoint-md - 1){
+        &--fechado{
+            .menu-principal__btn{    
+                background-position: 6px;
+            }
+            .menu-principal__lista{
+                margin: 10px 0;
+            }
+            .menu-principal__item{
+                margin: 0;
+                height: 0;
+                overflow: hidden;
+            }
+        }
+    }
+}

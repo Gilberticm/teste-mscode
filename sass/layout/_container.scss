@@ -1,0 +1,24 @@
+/* container */
+.meu-container{
+    width: 95%;
+    margin: 0 auto;
+    @media (min-width: $breakpoint-sm) {
+        width: 90%;
+    }
+    
+    @media (min-width: $breakpoint-md) {
+        width: 80%;
+    }
+    
+    @media (min-width: $breakpoint-lg) {
+        width: 70%;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+        width: 50%;
+    }
+    
+    @media (min-width: 1980px) {
+        width: 35%;
+    }
+}

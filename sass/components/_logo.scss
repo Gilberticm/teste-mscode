@@ -1,0 +1,17 @@
+.logo {
+    background-image: url(../img/header-logo-2.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 140px;
+    height: 42px;
+    text-indent: -9999px;
+    margin: 0;
+    margin-bottom: 10px;
+
+    &--menor {
+        background-image: url(../img/footer-logo-2.png);
+        width: 61px;
+        height: 76px;
+        margin: 0 auto;
+    }
+}

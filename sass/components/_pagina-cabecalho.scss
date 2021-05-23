@@ -1,0 +1,27 @@
+.pagina-cabecalho{
+    margin-top: 20px;
+    background-color: $cor-principal;
+    color: #fff;
+    
+    @media (min-width: $breakpoint-md) {
+        padding-top: 50px;
+    }
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    &__titulo{
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__titulo::after{
+        content: '';
+        display: block;
+        width: 90px;
+        height: 3px;
+        background-color: #fff;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+}

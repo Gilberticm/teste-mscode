@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSCode Login</title>
+    <link rel="icon" href="img/favicon.webp">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body-login">
+
+    <!-- Ínicio cabeçalho do site -->
+    <header class="cabecalho cabecalho-login">
+
+        <!-- Ínicio da div que controla tamanho do site -->
+        <div class="meu-container">
+
+            <!-- Logo -->
+            <a class="logo" href="/index.html">Moveis Simonetti</a>
+
+            <!-- Ínicio menu navegação -->
+            <nav class="menu-principal menu-principal--fechado" id="nav">
+
+                <!-- Botão menu -->
+                <button class="menu-principal__btn">Menu</button>
+
+                <!-- Lista menu -->
+                <ul class="menu-principal__lista">
+
+                    <!-- Itens menu -->
+                    <li><a class="menu-principal__item" href="https://www.moveissimonetti.com.br"
+                            target="_blank">Site</a></li>
+                    <li><a class="menu-principal__item" href="#">Produtos</a></li>
+                    <li><a class="menu-principal__item " href="index.html">Pesquisa</a></li>
+                    <li><a class="menu-principal__item menu-principal__item--atual" href="login.html">Login</a></li>
+                </ul><!-- Fim lista menu -->
+            </nav><!-- Fim menu navegação -->
+        </div><!-- Fim da div que controla tamanho do site -->
+    </header><!-- Fim cabeçalho site -->
+
+    <!-- Ínici conteúdo da página-->
+    <main class="main-login">
+
+        <!-- Ínicio da div que controla tamanho do site -->
+        <div class="meu-container">
+
+            <!-- Ínicio do formulário login -->
+            <form class="formulario-login" method="post">
+
+                <h1 class="formulario-login__titulo">Login</h1>
+
+                <div class="formulario-login__grupo">
+
+                    <label for="name" class="formulario-login__label">Nome</label><br>
+                    <input id="name" type="text" placeholder="E-mail ou Usuário" class="formulario-login__campo"
+                        autocomplete="off" required>
+                </div>
+                <div class="formulario-login__grupo">
+
+                    <label for="password" class="formulario-login__label">Senha</label><br>
+                    <input id="password" type="password" placeholder="**********" class="formulario-login__campo"
+                        autocomplete="off" required>
+                </div>
+
+                <a href="#" class="formulario-login__forgot">Esqueci minha senha</a>
+
+                <input type="submit" class="formulario-login__botao" value="Entrar">
+
+                <p class="formulario-login__signup">
+                    Não possui login na Móveis Simonetti?
+                    <a class="formulario-login__signup__link" href="#">Cadastre-se agora</a>
+                </p>
+            </form><!-- fim do formulário login -->
+        </div><!-- Fim da div que controla tamanho do site -->
+    </main><!-- Fim conteúdo da página-->
+
+
+    <!-- Ínicio rodapé -->
+    <footer class="rodape">
+
+        <!-- Ínicio linha 1 de conteúdos rodapé -->
+        <div class="rodape__linha-1">
+            <div class="meu-container">
+
+                <div class="container">
+
+                    <!-- Coluna rodapé logo -->
+                    <div class="rodape__coluna">
+                        <a class="logo logo--menor" href="/index.html">Moveis Simonetti</a><!-- Logo -->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quisquam dolorum officia
+                            blanditiis dolorem nemo.</p>
+                    </div>
+
+                    <!-- Coluna rodapé das redes sociais -->
+                    <div class="rodape__coluna">
+                        <h2 class="rodape__titulo">Social</h2>
+                        <ul class="rodape__lista-links">
+                            <li class="rodape__lista-links__item"><a href="#">Twitter</a></li>
+                            <li class="rodape__lista-links__item"><a href="#">Facebook</a></li>
+                            <li class="rodape__lista-links__item"><a href="#">Instagram</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna rodapé de navegação -->
+                    <div class="rodape__coluna">
+                        <h2 class="rodape__titulo">Links Navegação</h2>
+                        <ul class="rodape__lista-links">
+                            <li class="rodape__lista-links__item"><a href="https://www.moveissimonetti.com.br">Site</a>
+                            </li>
+                            <li class="rodape__lista-links__item"><a href="/produtos.html">Produtos</a></li>
+                            <li class="rodape__lista-links__item"><a href="/index.html">Pesquisa</a></li>
+                            <li class="rodape__lista-links__item"><a href="/login.html">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- fim linha 1 de conteúdos rodapé -->
+
+        <!-- Ínicio linha 2 de copyrigth rodapé -->
+        <div class="rodape__linha-2">
+            &copy; 2021 - Todos os direitos reservados - Gilbert de Oliveira Santos
+        </div><!-- fim linha 2 de copyrigth rodapé -->
+    </footer><!-- Fim rodapé -->
+
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/botao-menu.js"></script>
+</body>
+
+</html>

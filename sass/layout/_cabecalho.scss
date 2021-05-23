@@ -1,0 +1,30 @@
+.cabecalho {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 0;
+    width: 100%;
+    box-shadow: 0 0 5px #888888;
+    @media(min-width: $breakpoint-md) {
+        
+        min-height: 100px;
+        
+        .logo{
+            float: left;
+            margin-top: 10px;
+        }
+    
+        .menu-principal{
+            float: right;
+            margin-top: 22px;
+        }
+    }
+    @media (min-width: $breakpoint-xl) {
+        height: 120px;
+    }
+
+    &-login{
+        box-shadow: 3px 3px 10px #a7a7a7;
+    }
+
+}

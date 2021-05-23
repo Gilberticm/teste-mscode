@@ -1,0 +1,60 @@
+.rodape{
+
+    /* Cor da letra roapé */
+    color: #fff;
+
+    &__linha-1 { /* Linha conteudo rodapé */
+        background-color: $cor-principal;
+        padding: 15px;
+        overflow: auto;
+    }
+    
+    &__linha-2 { /* Linha de copyrigth */
+        background-color: rgb(26, 26, 26);
+        text-align: center;
+        padding: 15px;
+    }
+      
+    &__coluna { /* Colunas da linha de conteudo radapé */
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+      
+    &__titulo { /* Titulo das colunas rodapé */
+        border-bottom: 1px solid #fff;
+        padding: 0 10px 10px 10px;
+        font-size: 18px;
+    }
+      
+    &__lista-links { /* Lista de links rodapé */
+        padding: 0;
+        list-style: none;
+    }
+    
+    &__lista-links a{ /* item da lista rodapé */
+        text-decoration: none;
+        color: #fff;
+        &:hover{
+            color: #000;
+        }
+    }
+    
+    &__lista-links__item { /* item da lista rodapé */
+        text-decoration: none;
+        margin-bottom: 10px;
+        display: block;
+    }
+      
+    &__lista-links__item::before { /* item da lista rodapé */
+        content: ">";
+        margin-right: 8px;
+    }
+
+    @media (min-width: $breakpoint-md){
+        &__coluna{
+            float: left;
+            width: 33.333%;
+            padding: 0 15px; 
+        }
+    }
+}
